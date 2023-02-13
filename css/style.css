@@ -17,6 +17,19 @@
     align-items: center;
 }
 
+ul {
+    list-style: none;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.inline-block100{
+    display: inline-block;
+    width: 100px;
+}
+
 .container {
     display: flex;
 }
@@ -69,7 +82,8 @@ nav {
 }
 
 .search-btn {
-    border: 1px solid darkgray;
+    /* border: 1px solid darkgray; */
+    background-color: darkgray;
     border-radius: 0 50px 50px 0;
     width: 10%;
 }
@@ -90,8 +104,15 @@ nav {
 
 .nav-right {
     width: 300px;
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
+    justify-content: end;
 }
+
+.list-user {
+    width: 50%;
+    justify-content: space-around;
+}
+
 
 .container {
     width: 100%;
@@ -103,5 +124,62 @@ nav {
     width: 300px;
     height: 100%;
     overflow-y: scroll;
+    background-color: blueviolet;
+}
+
+.home-buttons {
+    height: 150px;
+    border-bottom: 1px solid darkgray;
+}
+
+.home-buttons ul,
+.raccolta-buttons ul,
+.iscrizioni-buttons ul,
+.esplora-buttons ul
+ {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.home-buttons ul li,
+.raccolta-buttons ul li,
+.iscrizioni-buttons ul li,
+.esplora-buttons ul li {
+    margin-bottom: 15px;
+}
+
+.raccolta-buttons {
+    height: 300px;
+    width: 100%;
+    border-bottom: 1px solid darkgray;
+}
+
+.iscrizioni-buttons {
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid darkgray;
+}
+
+.esplora-buttons {
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid darkgray;
+}
+
+
+/* right */
+
+.right-content {
+    width: calc(100% - 300px);
+}
+
+.tag-bar {
+    height: 70px;
+    width: 100%;
     background-color: blueviolet;
 }
