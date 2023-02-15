@@ -113,61 +113,73 @@
                         <li>Dal vivo</li>
                     </ul>
                 </div>
-                <div class="video-content">
-                    <div class="video-card">
-                        <div class="img-video-cont">
-                            <img src="img/video-1.jpg" alt="">
-                        </div>
-                        <div class="d-flex content-ev">
-                            <div class="icon-video">
-                                <i class="fa-solid fa-user"></i>
+                <div class="container-dx">
+
+                    <!-- video -->
+                    <div class="video-content">
+                        <div v-for="(videocard, index) in videocards" :key="index" class="video-card">
+                            <div class="img-video-cont">
+                                 <img v-bind:src="'img/'+videocard.imgvideo" alt=""> 
                             </div>
-                            <div class="text-video">
-                                <div class="title-video">
-                                    <h3>Titolo video Youtube</h3>
+                            <div class="d-flex content-ev">
+                                <div class="icon-video">
+                                    <i class="fa-solid fa-user"></i>
                                 </div>
-                                <div class="subtitle">
-                                    <p>Nome Canale</p>
+                                <div class="text-video">
+                                    <div class="title-video">
+                                        <h3>{{videocard.title}}</h3>
+                                    </div>
+                                    <div class="subtitle">
+                                        <p>{{videocard.canale}}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="setting-vieo">
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="video-card">
-                        <div class="img-video-cont">
-                            <img src="img/video-1.jpg" alt="">
-                        </div>
-                        <div>
-                            <div class="icon-video">
-                                icona
-                            </div>
-                            <div class="text-video">
-                                <div class="title-video">
-                                    titolo
-                                </div>
-                                <div class="subtitle">
-                                    sottotitolo
+                                <div class="setting-vieo">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="video-card">
-                        <div class="img-video-cont">
-                            <img src="img/video-1.jpg" alt="">
-                        </div>
-                        <div>
-                            <div class="icon-video">
-                                <i class="fa-solid fa-user"></i>
+                    <!-- short -->
+                    <div>
+                        <h4>Shorts</h4>
+                    </div>
+                    <div class="short-content">
+                        <div v-for="(short, index) in shorts" class="short-card">
+                            <div class="short-img">
+                                <img :src="'img/'+short.img" alt="">
                             </div>
-                            <div class="text-video">
-                                <div class="title-video">
-                                    titolo
+                            <div class="short-upper">
+                                <div class="short-title">
+                                    <h4>{{short.title}}</h4>
                                 </div>
-                                <div class="subtitle">
-                                    sottotitolo
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                            <div class="visual">
+                                <p> {{short.visual}}} visualizzazioni </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-content">
+                        <div v-for="(video, index) in videos" class="video-card">
+                            <div class="img-video-cont">
+                                 <img v-bind:src="'img/'+video.imgvideo" alt=""> 
+                            </div>
+                            <div class="d-flex content-ev">
+                                <div class="icon-video">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div class="text-video">
+                                    <div class="title-video">
+                                        <h3>{{video.title}}</h3>
+                                    </div>
+                                    <div class="subtitle">
+                                        <p>{{video.canale}}</p>
+                                    </div>
+                                </div>
+                                <div class="setting-vieo">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </div>
                             </div>
                         </div>
