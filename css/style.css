@@ -28,6 +28,22 @@ ul {
     list-style: none;
 }
 
+.home-buttons ul li,
+.raccolta-buttons ul li,
+.iscrizioni-buttons ul li,
+.esplora-buttons ul li {
+padding: 5px;
+border-radius: 5px;
+height: 30px;
+display: flex;
+align-items: center;
+padding: 0 10px;
+}
+
+.active {
+    background-color: lightgray;
+}
+
 .mr-20 {
     margin-right: 20px;
 }
@@ -52,7 +68,7 @@ nav {
 }
 
 .nav-left {
-    width: 300px;
+    width: 220px;
     /* background-color: darkred; */
 }
 
@@ -75,12 +91,12 @@ nav {
 }
 
 .nav-center {
-    width: calc(100% - 600px);
+    width: calc(100% - 220px);
     /* background-color: burlywood; */
 }
 
 .search {
-    width: 40%;
+    width: 70%;
 }
 
 .searchbar {
@@ -132,7 +148,7 @@ nav {
 }
 
 .left-content {
-    width: 300px;
+    width: 220px;
     height: 100%;
     overflow-y: scroll;
     /* background-color: blueviolet; */
@@ -141,6 +157,11 @@ nav {
 .home-buttons {
     height: 150px;
     border-bottom: 1px solid darkgray;
+}
+
+.title-section {
+    margin-left: 40px;
+    margin-bottom: 10px;
 }
 
 .home-buttons ul,
@@ -154,7 +175,13 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
 
+}
+
+.iscrizioni-buttons,
+.esplora-buttons {
+    padding-top: 20px;
 }
 
 .home-buttons ul li,
@@ -186,7 +213,7 @@ nav {
 /* right */
 
 .right-content {
-    width: calc(100% - 300px);
+    width: calc(100% - 220px);
 }
 
 .tag-bar {
@@ -248,6 +275,10 @@ nav {
     border-radius: 15px;
 }
 
+.icon-video {
+   margin-right: 10px; 
+}
+
 .icon-video i {
     background-color: lightgray;
     padding: 10px;
@@ -259,6 +290,10 @@ nav {
 
 }
 
+.visual {
+    font-size: 12px;
+}
+
 .short-content {
     display: flex;
     padding: 30px 0 30px 0;
@@ -267,7 +302,7 @@ nav {
 
 .short-card {
     height: 400px;
-    width: calc(90% / 9 - 20px);
+    width: calc(90% / 6 - 20px);
     margin-right: 20px;
 }
 
@@ -284,4 +319,9 @@ nav {
 
 .visual {
     padding: 0 10px;
+}
+
+.userssub {
+
+    width: 20px;
 }

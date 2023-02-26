@@ -57,7 +57,8 @@
                 <!-- 3 home buttons -->
                 <div class="home-buttons">
                     <ul>
-                        <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
+
+                        <li class="active"><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
                         <li><i class="fa-solid fa-up-right-and-down-left-from-center mr-20"></i> <span class="inline-block100">Shorts</span></li>
                         <li><i class="fa-solid fa-square-plus mr-20"></i> <span class="inline-block100">Iscrizioni</span></li>
                     </ul>
@@ -65,17 +66,17 @@
 
                 <div class="raccolta-buttons">
                     <ul>
-                        <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
-                        <li><i class="fa-solid fa-up-right-and-down-left-from-center mr-20"></i> <span class="inline-block100">Shorts</span></li>
-                        <li><i class="fa-solid fa-square-plus mr-20"></i> <span class="inline-block100">Iscrizioni</span></li>
-                        <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
+                        <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Raccolta</span></li>
+                        <li><i class="fa-solid fa-up-right-and-down-left-from-center mr-20"></i> <span class="inline-block100">Cronologia</span></li>
+                        <li><i class="fa-solid fa-square-plus mr-20"></i> <span class="inline-block100">I tuoi video</span></li>
+                        <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">I tuoi film</span></li>
                         <li><i class="fa-solid fa-up-right-and-down-left-from-center mr-20"></i> <span class="inline-block100">Shorts</span></li>
                         <li><i class="fa-solid fa-square-plus mr-20"></i> <span class="inline-block100">Iscrizioni</span></li>
                     </ul>
                 </div>
 
                 <div class="iscrizioni-buttons">
-                    <p>Iscrizioni</p>
+                    <p class="title-section">Iscrizioni</p>
                     <ul>
                         <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
                         <li><i class="fa-solid fa-up-right-and-down-left-from-center mr-20"></i> <span class="inline-block100">Shorts</span></li>
@@ -87,7 +88,7 @@
                 </div>
 
                 <div class="esplora-buttons">
-                    <p>Esplora</p>
+                    <p class="title-section">Esplora</p>
                     <ul>
                         <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
                         <li><i class="fa-solid fa-up-right-and-down-left-from-center mr-20"></i> <span class="inline-block100">Shorts</span></li>
@@ -119,7 +120,7 @@
                     <div class="video-content">
                         <div v-for="(videocard, index) in videocards" :key="index" class="video-card">
                             <div class="img-video-cont">
-                                 <img v-bind:src="'img/'+videocard.imgvideo" alt=""> 
+                                 <img :src="videocard.imgvideo" alt=""> 
                             </div>
                             <div class="d-flex content-ev">
                                 <div class="icon-video">
@@ -127,10 +128,13 @@
                                 </div>
                                 <div class="text-video">
                                     <div class="title-video">
-                                        <h3>{{videocard.title}}</h3>
+                                        <h4>{{videocard.title}}</h4>
                                     </div>
                                     <div class="subtitle">
                                         <p>{{videocard.canale}}</p>
+                                    </div>
+                                    <div>
+                                        <p>15345634 visualizzazioni</p>
                                     </div>
                                 </div>
                                 <div class="setting-vieo">
@@ -147,16 +151,16 @@
                     <div class="short-content">
                         <div v-for="(short, index) in shorts" class="short-card">
                             <div class="short-img">
-                                <img :src="'img/'+short.img" alt="">
+                                <img :src="short.img" alt="">
                             </div>
                             <div class="short-upper">
                                 <div class="short-title">
-                                    <h4>{{short.title}}</h4>
+                                    <h5>{{short.title}}</h5>
                                 </div>
                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                             </div>
                             <div class="visual">
-                                <p> {{short.visual}}} visualizzazioni </p>
+                                <p> {{short.visual}} visualizzazioni </p>
                             </div>
                         </div>
                     </div>
@@ -191,7 +195,7 @@
         </div>
         
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script/script.js"></script>
 </body>
 </html>
