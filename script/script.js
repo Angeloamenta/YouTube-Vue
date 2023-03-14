@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
 
+      menu: false,
       users: null,
       message: 'Hello Vue!',
       videocards: [
@@ -133,5 +134,13 @@ createApp({
     }).catch((error) => { console.log(error); });
     
 
+  },
+  methods: {
+    hamburger() {
+
+      this.menu = !this.menu;
+      console.log(this.menu);
+    }
+    
   },
 }).mount('#app')
