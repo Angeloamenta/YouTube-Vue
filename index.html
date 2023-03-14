@@ -45,8 +45,11 @@
             <div class="nav-right d-flex align-center">
                 <ul class="list-user d-flex align-center">
                     <li><i class="fa-solid fa-video"></i></li>
-                    <li><i class="fa-solid fa-bell"></i></li>
-                    <li><i class="fa-solid fa-user"></i></li>
+                    <div class="notify">
+                        <li><i class="fa-solid fa-bell"></i></li>
+                        <span>1</span>
+                    </div>
+                    <img class="main-user" src="https://i0.wp.com/angeloamenta.it/wp-content/uploads/2022/10/IMG_9656-01-01.jpeg?w=1290&ssl=1" alt="">
                 </ul>
             </div>
         </nav>
@@ -78,12 +81,18 @@
                 <div class="iscrizioni-buttons">
                     <p class="title-section">Iscrizioni</p>
                     <ul>
-                        <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
+                        <!-- <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
                         <li><i class="fa-solid fa-up-right-and-down-left-from-center mr-20"></i> <span class="inline-block100">Shorts</span></li>
                         <li><i class="fa-solid fa-square-plus mr-20"></i> <span class="inline-block100">Iscrizioni</span></li>
                         <li><i class="fa-solid fa-house mr-20"></i> <span class="inline-block100">Home</span></li>
                         <li><i class="fa-solid fa-up-right-and-down-left-from-center mr-20"></i> <span class="inline-block100">Shorts</span></li>
-                        <li><i class="fa-solid fa-square-plus mr-20"></i> <span class="inline-block100">Iscrizioni</span></li>
+                        <li><i class="fa-solid fa-square-plus mr-20"></i> <span class="inline-block100">Iscrizioni</span></li> -->
+                        <li class="users" v-for="(user, index) in users">
+                            <!-- <div class="user-img-cont"> -->
+                                <img v-bind:src="user.image" alt="">  
+                            <!-- </div> -->
+                             <span>{{user.firstName}}</span>
+                        </li>
                     </ul>
                 </div>
 

@@ -37,7 +37,10 @@ border-radius: 5px;
 height: 30px;
 display: flex;
 align-items: center;
-padding: 0 10px;
+padding:10px;
+width: 90%;
+display: flex;
+/* justify-content: center; */
 }
 
 .active {
@@ -182,6 +185,7 @@ nav {
 .iscrizioni-buttons,
 .esplora-buttons {
     padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .home-buttons ul li,
@@ -199,14 +203,15 @@ nav {
 
 .iscrizioni-buttons {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     border-bottom: 1px solid darkgray;
 }
 
 .esplora-buttons {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
     border-bottom: 1px solid darkgray;
+    /* padding: 5px 0; */
 }
 
 
@@ -231,9 +236,13 @@ nav {
 
 .tag-bar ul li {
     margin-right: 10px;
-    padding: 9px;
+    padding: 7px 15px;
     background-color: darkgray;
     border-radius: 10px;
+}
+
+.tag-bar ul li:hover {
+    background-color: rgb(126, 126, 126);
 }
 
 .container-dx {
@@ -257,15 +266,39 @@ nav {
 
 .video-card {
     height: 200px;
-    width: calc(100% / 4 - 10px);
+    width: calc(100% / 3 - 10px);
     margin-left: 10px;
     margin-bottom: 80px;
+    transition: all 1s ;
+}
+
+
+
+.video-card:nth-child(2) {
+    margin-right: 5px;
 }
 
 .video-card:hover {
-    scale: 1.2;
-    
+   scale: 1.3;   
 }
+
+
+
+.video-card:hover .img-video-cont,
+.video-card:hover .content-ev {
+    background-color: white
+}
+
+.video-card:hover .img-video-cont{
+    border-radius: 15px 15px 0 0 ;
+}
+
+.video-card:hover .content-ev {
+    border-radius:  0 0 15px 15px;
+
+}
+
+
 
 .video-card img ,
 .short-card img{
@@ -274,6 +307,13 @@ nav {
     object-fit: cover;
     border-radius: 15px;
 }
+
+.video-card:hover img {
+    border-radius: 15px 15px 0 0 ;
+}
+
+
+.video-card
 
 .icon-video {
    margin-right: 10px; 
@@ -324,4 +364,42 @@ nav {
 .userssub {
 
     width: 20px;
+}
+
+
+.users img  {
+    width: 25px;
+    margin-right: 10px;
+    border-radius: 100%;
+    background-color: cornflowerblue;
+}
+
+.notify {
+    position: relative;
+}
+
+.notify span {
+
+    background-color: red;
+color: white;
+position: absolute;
+top: -8px;
+right: -10px;
+height: 15px;
+width: 15px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+font-size: 10px;
+}
+
+.main-user {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+}
+
+.left-content ul li:hover {
+    background-color: lightgrey;
 }
