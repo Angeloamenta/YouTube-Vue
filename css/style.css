@@ -266,7 +266,7 @@ nav {
 
 .video-card {
     height: 200px;
-    width: calc(100% / 3 - 10px);
+    width: calc(100% / 4 - 10px);
     margin-left: 10px;
     margin-bottom: 80px;
     transition: all 1s ;
